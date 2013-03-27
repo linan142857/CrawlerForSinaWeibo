@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Examples"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="login"/>
+	<classpathentry kind="src" path="util"/>
+	<classpathentry kind="src" path="WeiboSDK"/>
+	<classpathentry kind="src" path="DataAccess"/>
+	<classpathentry kind="src" path="action"/>
+	<classpathentry kind="src" path="parser"/>
+	<classpathentry kind="lib" path="resource/base64.jar"/>
+	<classpathentry kind="lib" path="resource/commons-httpclient-3.1.jar" sourcepath="g:/我的文档/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar"/>
+	<classpathentry kind="lib" path="resource/convert4j.jar"/>
+	<classpathentry kind="lib" path="resource/htmlparser.jar"/>
+	<classpathentry kind="lib" path="resource/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="resource/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="resource/weibo4j-1.2.0.jar"/>
+	<classpathentry kind="lib" path="resource/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="resource/com.springsource.org.apache.log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="resource/jmxtools-1.2.1.jar"/>
+	<classpathentry kind="lib" path="resource/org.springframework.asm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="resource/org.springframework.beans-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="resource/org.springframework.context-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="resource/org.springframework.core-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="resource/org.springframework.expression-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/fluent-hc-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-cache-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.2.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

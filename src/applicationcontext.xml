@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- cookie池 -->
+	<bean id="weiboCookiesManager" class="mvs.weibo.page.util.pool.WeiboCookiesManager">
+		<constructor-arg index="0">
+			<value>cookies.txt</value>
+		</constructor-arg>
+	</bean>
+	<!-- 线程池 -->
+	<bean id="threadPoolManager" class="mvs.weibo.page.util.pool.ThreadPoolManager">
+		<constructor-arg index="0" value="30"></constructor-arg>
+	</bean>
+
+	<!-- parser层 -->
+	<bean id="userInfoParser" class="mvs.weibo.page.parser.UserInfoParser"></bean>
+	<bean id="statusParser" class="mvs.weibo.page.parser.StatusParser"></bean>
+
+
+	<!-- service层 -->
+	<bean id="baseService" class="mvs.weibo.page.service.BaseService">
+		<property name="weiboCookiesManager" ref="weiboCookiesManager"></property>
+		<property name="threadPoolManager" ref="threadPoolManager"></property>
+	</bean>
+	<bean id="userInfoServiceImpl" class="mvs.weibo.page.service.user.UserInfoServiceImpl"
+		parent="baseService">
+		<property name="userInfoParser" ref="userInfoParser"></property>
+	</bean>
+	<bean id="statusServiceImpl" class="mvs.weibo.page.service.status.StatusServiceImpl"
+		parent="baseService">
+		<property name="statusParser" ref="statusParser"></property>
+		<property name="userInfoService" ref="userInfoServiceImpl"></property>
+	</bean>
+
+	<!-- action层 -->
+	<!-- 爬用户微博信息 -->
+	<bean id="statusAction" class="mvs.weibo.page.action.status.StatusAction">
+		<property name="statusService" ref="statusServiceImpl"></property>
+	</bean>
+</beans>
